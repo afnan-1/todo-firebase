@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBiGxK07P8lry1GY6Go6FwDaljviBjaKD0",
+    authDomain: "onlinewebandmobile-9e2db.firebaseapp.com",
+    databaseURL: "https://onlinewebandmobile-9e2db.firebaseio.com",
+    projectId: "onlinewebandmobile-9e2db",
+    storageBucket: "onlinewebandmobile-9e2db.appspot.com",
+    messagingSenderId: "690575272927",
+    appId: "1:690575272927:web:d81ee2c2efbc602c7b326a",
+    measurementId: "G-KJ5TJRC337"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</head>
+<body onload='getAllData()'>
+    <div class="main">
+        <h1>Todo App</h1>
+        <input type="text" id="inp">
+        <button onclick="add()">Add Todo</button>
+        <button onclick="delAll()">Delete All</button>
+        <!-- <button onclick="getAllData()">get All</button> -->
+            <ul id="list">
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
